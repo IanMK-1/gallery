@@ -13,3 +13,12 @@ class Location(models.Model):
     location = models.CharField()
     time_posted = models.DateTimeField(auto_now_add=True)
 
+
+class Category(models.Model):
+    CATEGORY_CHOICES = (
+        ('travel', 'Travel'),
+        ('food', 'Food'),
+        ('sports', 'Sports'),
+        ('landscape', 'Landscape')
+    )
+    category = models.CharField(max_length=9, choices=CATEGORY_CHOICES, default='food')
