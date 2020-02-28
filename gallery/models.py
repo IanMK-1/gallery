@@ -29,3 +29,11 @@ class Image(models.Model):
     def delete_image(self):
         self.delete()
 
+    @classmethod
+    def update_image(cls, id, image):
+        cls.objects.filter(id=id).update(image=image)
+
+    @classmethod
+    def get_image_by_id(cls, id):
+        specific_image = cls.objects.filter(id=id)
+        return specific_image
