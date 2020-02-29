@@ -33,6 +33,18 @@ class Category(models.Model):
     def __str__(self):
         return self.category
 
+    def save_category(self):
+        self.save()
+
+    def delete_category(self):
+        self.delete()
+
+    @classmethod
+    def update_category(cls, id, category):
+        cls.objects.filter(id=id).update(category=category)
+        updated_category = cls.objects.get(id=id)
+        return updated_category
+
 
 class Image(models.Model):
     image = models.ImageField(upload_to='images/', null=True)
