@@ -92,3 +92,28 @@ class LocationTestClass(TestCase):
         updated_location = Location.update_location(self.new_location.id, 'Egypt')
         self.assertEqual(updated_location.location, 'Egypt')
 
+
+class CategoryTestClass(TestCase):
+
+    def setUp(self) -> None:
+        self.new_category = Category(category='food')
+        self.new_category.save_category()
+
+    def tearDown(self) -> None:
+        Category.objects.all().delete()
+
+    def test_save_category_method(self):
+        self.new_category.save_category()
+        category = Category.objects.all()
+        self.assertTrue(len(category) > 0)
+
+    def test_delete_category_method(self):
+        self.new_category.save_category()
+        self.new_category.delete_category()
+        category = Category.objects.all()
+        self.assertTrue(len(category) == 0)
+
+    def test_update_category_method(self):
+        self.new_category.save_category()
+        updated_category = Category.update_category(self.new_category.id, 'sports')
+        self.assertEqual(updated_category.category, 'sports')
