@@ -51,7 +51,10 @@ class ImageTestClass(TestCase):
         specific_image = Image.get_image_by_id(self.first_image.id)
         self.assertEqual(self.first_image.image_name, specific_image.image_name)
 
-
+    def test_search_image_by_category_method(self):
+        self.first_image.save_image()
+        image_category = Image.search_image_by_category(self.first_image.image_category.category)
+        self.assertEqual(image_category.image_category.category, 'travel')
     # def test_update_image_method(self):
     #     self.first_image.save_image()
     #     Image.update_image(self.first_image.id, 'food.jpg')
