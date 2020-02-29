@@ -8,6 +8,18 @@ class Location(models.Model):
     def __str__(self):
         return self.location
 
+    def save_location(self):
+        self.save()
+
+    def delete_location(self):
+        self.delete()
+
+    @classmethod
+    def update_location(cls, id, location):
+        cls.objects.filter(id=id).update(location=location)
+        updated_location = cls.objects.get(id=id)
+        return updated_location
+
 
 class Category(models.Model):
     CATEGORY_CHOICES = (
@@ -35,8 +47,9 @@ class Image(models.Model):
     def delete_image(self):
         self.delete()
 
-    def display_all_images(self):
-        all_images = Image.objects.all()
+    @classmethod
+    def display_all_images(cls):
+        all_images = cls.objects.all()
         return all_images
 
     @classmethod
