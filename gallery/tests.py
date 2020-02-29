@@ -65,3 +65,30 @@ class ImageTestClass(TestCase):
         self.first_image.save_image()
         updated_image = Image.update_image(self.first_image.id, 'food.jpg')
         self.assertEqual(updated_image.image, 'food.jpg')
+
+
+class LocationTestClass(TestCase):
+
+    def setUp(self) -> None:
+        self.new_location = Location(location='Thika')
+        self.new_location.save_location()
+
+    def tearDown(self) -> None:
+        Location.objects.all().delete()
+
+    def test_save_location_method(self):
+        self.new_location.save_location()
+        location = Location.objects.all()
+        self.assertTrue(len(location) > 0)
+
+    def test_delete_location_method(self):
+        self.new_location.save_location()
+        self.new_location.delete_location()
+        location = Location.objects.all()
+        self.assertTrue(len(location) == 0)
+
+    def test_update_location_method(self):
+        self.new_location.save_location()
+        updated_location = Location.update_location(self.new_location.id, 'Egypt')
+        self.assertEqual(updated_location.location, 'Egypt')
+
