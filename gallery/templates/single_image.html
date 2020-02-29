@@ -17,6 +17,7 @@
             <div class="col-md-5">
                 <p>{{specific_image.description}}</p>
                 <p>{{specific_image.image_location.time_posted|timesince}}</p>
+                <a href="{% url 'Filter_image' specific_image.image_location.location %}" class="btn bg-primary">{{specific_image.image_location.location}}</a>
             </div>
         </div>
     </div>

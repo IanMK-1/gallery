@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{{title}}</h2>
+            </div>
+        </div>
+        <div class="row">
+            {% for image in images%}
+                <div class="col-md-4">
+                    <img src="{{image.image.url}}" class="img-responsive" alt="loading image...">
+                    {{image.image_name}}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
