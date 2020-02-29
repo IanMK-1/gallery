@@ -60,7 +60,8 @@ class ImageTestClass(TestCase):
         self.first_image.save_image()
         image_by_location = Image.filter_by_location(self.first_image.image_location.location)
         self.assertEqual(image_by_location.image_location.location, 'Dubai')
-    # def test_update_image_method(self):
-    #     self.first_image.save_image()
-    #     Image.update_image(self.first_image.id, 'food.jpg')
-    #     self.assertEqual(self.first_image.image, 'food.jpg')
+
+    def test_update_image_method(self):
+        self.first_image.save_image()
+        updated_image = Image.update_image(self.first_image.id, 'food.jpg')
+        self.assertEqual(updated_image.image, 'food.jpg')
