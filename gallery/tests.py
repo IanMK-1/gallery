@@ -45,3 +45,14 @@ class ImageTestClass(TestCase):
         self.first_image.delete_image()
         images = Image.objects.all()
         self.assertTrue(len(images) == 0)
+
+    def test_get_image_by_id_method(self):
+        self.first_image.save_image()
+        specific_image = Image.get_image_by_id(self.first_image.id)
+        self.assertEqual(self.first_image.image_name, specific_image.image_name)
+
+
+    # def test_update_image_method(self):
+    #     self.first_image.save_image()
+    #     Image.update_image(self.first_image.id, 'food.jpg')
+    #     self.assertEqual(self.first_image.image, 'food.jpg')

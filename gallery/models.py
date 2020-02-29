@@ -45,15 +45,15 @@ class Image(models.Model):
 
     @classmethod
     def get_image_by_id(cls, id):
-        specific_image = cls.objects.filter(id=id)
+        specific_image = cls.objects.get(id=id)
         return specific_image
 
     @classmethod
     def search_image_by_category(cls, image_category):
-        search_result = cls.objects.filter(image_category__category=image_category)
+        search_result = cls.objects.get(image_category__category=image_category)
         return search_result
 
     @classmethod
     def filter_by_location(cls, location):
-        search_image_by_location = cls.objects.filter(image_location__location=location)
+        search_image_by_location = cls.objects.get(image_location__location=location)
         return search_image_by_location
