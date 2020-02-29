@@ -5,6 +5,9 @@ class Location(models.Model):
     location = models.CharField(max_length=20)
     time_posted = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.location
+
 
 class Category(models.Model):
     CATEGORY_CHOICES = (
@@ -14,6 +17,9 @@ class Category(models.Model):
         ('landscape', 'Landscape')
     )
     category = models.CharField(max_length=9, choices=CATEGORY_CHOICES, default='food')
+
+    def __str__(self):
+        return self.category
 
 
 class Image(models.Model):
@@ -28,6 +34,10 @@ class Image(models.Model):
 
     def delete_image(self):
         self.delete()
+
+    def display_all_images(self):
+        all_images = Image.objects.all()
+        return all_images
 
     @classmethod
     def update_image(cls, id, image):
