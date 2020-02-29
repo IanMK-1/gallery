@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container-fluid">
+                <h3>{{specific_image.image_name}}</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{specific_image.image.url}}" class="img-responsive" alt="loading image...">
+            </div>
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-5">
+                <p>{{specific_image.description}}</p>
+                <p>{{specific_image.image_location.time_posted|timesince}}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

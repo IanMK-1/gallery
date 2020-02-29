@@ -7,7 +7,7 @@
         <div class="row">
             {% for image in all_images %}
                 <div class="col-md-4">
-                    <img src="{{image.image.url}}" class="img-responsive" alt="loading image...">
+                    <a href="{% url 'Single_image' image.id %}"><img src="{{image.image.url}}" class="img-responsive" alt="loading image..."></a>
                     <p>{{image.image_name}}</p>
                     <p>{{image.image_location.time_posted|timesince}}</p>
                 </div>
