@@ -55,6 +55,11 @@ class ImageTestClass(TestCase):
         self.first_image.save_image()
         image_category = Image.search_image_by_category(self.first_image.image_category.category)
         self.assertEqual(image_category.image_category.category, 'travel')
+
+    def test_filter_by_location(self):
+        self.first_image.save_image()
+        image_by_location = Image.filter_by_location(self.first_image.image_location.location)
+        self.assertEqual(image_by_location.image_location.location, 'Dubai')
     # def test_update_image_method(self):
     #     self.first_image.save_image()
     #     Image.update_image(self.first_image.id, 'food.jpg')
