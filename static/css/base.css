@@ -105,6 +105,7 @@ h2 {
 .limage {
     background-color: peru;
     font-size: 3vw;
+    padding-bottom: 10px;
 }
 .search_cat {
     background-color: #cd853f;

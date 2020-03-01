@@ -11,7 +11,7 @@
             {% for image in images%}
                 <div class="col-md-4">
                     <div class="limage">
-                        <img src="{{image.image.url}}" id="location" class="img-responsive" alt="loading image...">
+                        <a href="{% url 'Single_image' image.id %}"><img src="{{image.image.url}}" id="location" class="img-responsive" alt="loading image..."></a>
                         <p id="image_location">{{image.image_name}}</p>
                     </div>
                 </div>
