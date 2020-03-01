@@ -6,7 +6,8 @@ from . import views
 urlpatterns = [
     path('', views.homepage, name='Home_page'),
     re_path('image/(\d+)', views.single_image, name='Single_image'),
-    re_path('photos/(\D+)', views.filter_image_by_location, name='Filter_image')
+    re_path('photos/(\D+)', views.filter_image_by_location, name='Filter_image'),
+    re_path('search/', views.search_image_results, name='Search_image')
 ]
 
 if settings.DEBUG:
