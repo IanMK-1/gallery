@@ -60,10 +60,10 @@ p {
     padding-top: 40px;
 }
 img:hover {
-    position:relative;
-    height:auto;
-    display:block;
-    z-index:999;
+    position: initial;
+    background-color: gray; 
+    display: block;
+    z-index: 999;
 }
 h3 {
     font-family: 'Pacifico', cursive;
