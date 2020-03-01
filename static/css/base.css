@@ -65,3 +65,25 @@ img:hover {
     display:block;
     z-index:999;
 }
+h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 5vw;
+    margin-bottom: 30px;
+    text-align: center;
+}
+#single_image {
+    padding: 10px;
+    background-color: gray;
+    height: 100vh;
+    margin: auto;
+}
+.single {
+    margin: 0;
+    background-color: rgb(66, 209, 190);
+}
+.info {
+    background-color: rgb(226, 217, 217);
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
