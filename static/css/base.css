@@ -1,0 +1,41 @@
+.container-fluid {
+    margin: 0;
+}
+.navbar {
+    margin-bottom: 0px;
+    border-radius: 0%;
+    width: 100%;
+    background-color: rgb(74, 74, 80);
+    font-family: 'Cabin', sans-serif;
+}
+.jumbotron {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    background-color: rgb(66, 209, 190);
+    border-radius: 0%;
+    color: white;
+}
+.jumbotron h1 {
+    font-size: 8vw;
+}
+p {
+    font-family: 'Cabin', sans-serif;
+}
+#inlineFormCustomSelect {
+    padding: 5px;
+    background-color: transparent;
+    border-color: yellow;
+    color: white;
+}
+.navbar-form {
+    background: transparent;
+    float: right;
+}
+.navbar-form .btn {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 0%;
+}
+.glyphicon {
+    color: yellow;
+}
