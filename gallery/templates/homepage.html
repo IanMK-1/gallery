@@ -11,13 +11,15 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" id="homepage">
         <div class="row">
             {% for image in all_images %}
                 <div class="col-md-4">
-                    <a href="{% url 'Single_image' image.id %}"><img src="{{image.image.url}}" class="img-responsive" alt="loading image..."></a>
-                    <p>{{image.image_name}}</p>
-                    <p>{{image.image_location.time_posted|timesince}}</p>
+                   <div class="images">
+                        <a href="{% url 'Single_image' image.id %}"><img src="{{image.image.url}}" class="img-responsive" alt="loading image..."></a>
+                        <p id="image_name"><b>{{image.image_name}}</b></p>
+                        <p><b>Posted: </b>{{image.image_location.time_posted|timesince}} ago</p>
+                   </div>
                 </div>
             {% endfor%}
         </div>

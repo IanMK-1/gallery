@@ -14,6 +14,7 @@
     background-color: rgb(66, 209, 190);
     border-radius: 0%;
     color: white;
+    margin-bottom: 0;
 }
 .jumbotron h1 {
     font-size: 8vw;
@@ -38,4 +39,29 @@ p {
 }
 .glyphicon {
     color: yellow;
+}
+.images {
+    background-color: white;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.images img {
+    height: 50vh;
+    padding: 5px;
+}
+.images #image_name {
+    margin-top: 15px;
+    color: rgb(0, 255, 242);
+}
+#homepage {
+    margin-top: 0;
+    background-color: rgb(211, 218, 211);
+    padding-top: 40px;
+}
+img:hover {
+    position:relative;
+    height:auto;
+    display:block;
+    z-index:999;
 }
