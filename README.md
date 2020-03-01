@@ -1,4 +1,4 @@
-# My Gallery
+# Photo Gallery
 
 #### By Ian Mwangi
 

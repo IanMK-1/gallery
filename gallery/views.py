@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Image
-
+import pyperclip
 
 # Create your views here.
 def homepage(request):
