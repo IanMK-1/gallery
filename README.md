@@ -35,5 +35,8 @@
 ### Contacts
 Email: iankimotho233@gmail.com
 
+### Codebeat
+[![codebeat badge](https://codebeat.co/badges/e6e35c9c-7d2e-455e-b62e-a432fff107a1)](https://codebeat.co/projects/github-com-ianmk-1-gallery-master)
+
 ### Licence
 [The MIT License (MIT)](LICENCE.md)
