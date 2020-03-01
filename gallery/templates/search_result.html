@@ -10,8 +10,16 @@
         <div class="row">
             {% for result in results%}
                 <div class="col-md-4">
-                    <img src="{{result.image.url}}" class="img-responsive" alt="loading image...">
-                    {{result.image_name}}
+                    <div class="search_cat">
+                        <img src="{{result.image.url}}" id="cat_image" class="img-responsive" alt="loading image...">
+                        <p id="cat_name">{{result.image_name}}</p>
+                        <div class="i_info">
+                            <p style="font-size: 1.5vw;"><b>Description</b></p>
+                            <p>{{result.description}}</p>
+                            <p>Posted {{result.image_location.time_posted|timesince}} ago</p>
+                            <p>Location: {{result.image_location.location}}</p>
+                        </div>
+                    </div>
                 </div>
             {% endfor %}
         </div>

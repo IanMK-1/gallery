@@ -4,14 +4,16 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h2>{{title}}</h2>
+                <h2>All images from {{title}}</h2>
             </div>
         </div>
         <div class="row">
             {% for image in images%}
                 <div class="col-md-4">
-                    <img src="{{image.image.url}}" class="img-responsive" alt="loading image...">
-                    {{image.image_name}}
+                    <div class="limage">
+                        <img src="{{image.image.url}}" id="location" class="img-responsive" alt="loading image...">
+                        <p id="image_location">{{image.image_name}}</p>
+                    </div>
                 </div>
             {% endfor %}
         </div>
