@@ -86,6 +86,7 @@ h3 {
     margin: auto;
     margin-bottom: 30px;
     margin-top: 10px;
+    padding-bottom: 20px;
 }
 h2 {
     font-family: 'Pacifico', cursive;
@@ -103,7 +104,9 @@ h2 {
     font-family: 'Pacifico', cursive;
 }
 .limage {
-    background-color: peru;
+    background-color: peru;.image_link {
+    font-family: 'Cabin', sans-serif;
+}
     font-size: 3vw;
     padding-bottom: 10px;
 }
@@ -123,4 +126,7 @@ h2 {
 }
 .i_info {
     text-align: center;
+}
+.image_link {
+    font-family: 'Cabin', sans-serif;
 }
