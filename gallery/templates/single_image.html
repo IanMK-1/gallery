@@ -28,6 +28,10 @@
                     <p id="desc">{{specific_image.description}}</p>
                     <p><b>Posted </b>{{specific_image.image_location.time_posted|timesince}} ago</p>
                     <p>Location: <a href="{% url 'Filter_image' specific_image.image_location.location %}" >{{specific_image.image_location.location}}</a></p>
+                    <div class="image_link">
+                        <input type="text" value="{{specific_image.image.url}}" id="myInput">
+                        <button class="btn bg-primary" onclick="myFunction()">Copy Image Link</button>
+                    </div>
                 </div>
                 <div class="col-md-1">
     
@@ -35,4 +39,14 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function myFunction() {
+          var copyText = document.getElementById("myInput");
+          copyText.select();
+          copyText.setSelectionRange(0, 99999)
+          document.execCommand("copy");
+          alert("Link copied");
+        }
+    </script>
 {% endblock %}
